@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;500;700&display=swap');
+
+$text-color: #3a2f31;
+$backgr-color: #e9ecf1;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Mali', cursive;
+	text-align: center;
+	line-height: 3rem;
+	background-color: $backgr-color;
+	color: $text-color;
+}
+
+@media only screen and (min-width: 800px) {
+	.pomodoro-container {
+		width: 60vw;
+		margin: auto;
+	}
+}
+
+.length-ctrls {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+
+.br-ctrls,
+.sesh-ctrls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	.break,
+	.session,
+	.current {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		button {
+			height: 30px;
+			width: 30px;
+			margin: 5px;
+			cursor: pointer;
+		}
+	}
+}
+
+.current-sesh {
+	line-height: 2rem;
+	margin-top: 1rem;
+}
+
+#start_stop,
+#reset {
+	display: inline;
+	margin: 5px;
+	cursor: pointer;
+}
